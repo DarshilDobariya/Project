@@ -100,7 +100,7 @@ def extract_topic(command):
     if match:
         return match.group(2).strip()
     else:
-        return None
+        return command.strip()
 
 def get_definition(term):
     print(term)
