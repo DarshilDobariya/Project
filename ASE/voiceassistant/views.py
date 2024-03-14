@@ -54,10 +54,10 @@ def process_command(command):
         else:
             return "Sorry, I couldn't understand the topic you mentioned."
 
-    elif "calculate" in command:
-        expression = command.split("calculate")[-1].strip()
-        result = calculate(expression)
-        return f"The result of {expression} is {result}."
+    # elif "calculate" in command:
+    #     expression = command.split("calculate")[-1].strip()
+    #     result = calculate(expression)
+    #     return f"The result of {expression} is {result}."
     elif "youtube" in command:
         open_youtube()
         return "Opening YouTube."
@@ -160,12 +160,12 @@ def google_scholer(papers):
         link = f'https://scholar.google.com/scholar?&q='+papers
         webbrowser.open(link)
 
-def calculate(expression):
-    try:
-        result = eval(expression)
-        return result
-    except Exception as e:
-        return str(e)
+# def calculate(expression):
+#     try:
+#         result = eval(expression)
+#         return result
+#     except Exception as e:
+#         return str(e)
 
 def main():
     speak("Hello! How can I assist you with your research today?")
